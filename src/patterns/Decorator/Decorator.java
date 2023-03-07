@@ -1,6 +1,6 @@
 package patterns.Decorator;
 
-class TestDrive {
+public class Decorator {
     public static void main(String[] args) {
         SimpleCar car = new SimpleCar(20, 100);
         EngineUpdate carNew = new EngineUpdate(car);
@@ -11,16 +11,17 @@ class TestDrive {
     }
 }
 
-public abstract class Decorator extends Car {
+ abstract class DecoratorCar extends Car {
     Car car;
 
-    public Decorator(Car car) {
+    public DecoratorCar(Car car) {
         super(car.speed, car.weight);
         this.car = car;
     }
+
 }
 
-class EngineUpdate extends Decorator {
+class EngineUpdate extends DecoratorCar {
     Car context;
 
     public EngineUpdate(Car car) {
@@ -35,7 +36,7 @@ class EngineUpdate extends Decorator {
 
 }
 
-class AddCoupleWings extends Decorator implements CanFly {
+class AddCoupleWings extends DecoratorCar implements CanFly {
     Car context;
 
     public AddCoupleWings(Car car) {

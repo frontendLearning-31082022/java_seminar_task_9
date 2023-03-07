@@ -12,20 +12,6 @@ public abstract class PizzaStore {
         return pizza;
     }
 
-    public static void main(String[] args) {
-        new String("композиция-абстрактный интерфейс для создания семейств \n" +
-                "продуктов без зависимости от их конкретных классов. Для использования фабрики, вы\n" +
-                "создаете экземпляр и передаете его коду для абстрактного типа.");
-        PizzaStore ny=new NYpizzaStore();
-        Pizza pizza=ny.orderPizza("cheeseOnly");
-
-        PizzaStore Chikago=new ChickagoStore();
-        Pizza pizza2=Chikago.orderPizza("cheeseOnly");
-
-        new String("Фабричный Метод: наследование-необходимо расширить класс и переопределить \n" +
-                "фабричный метод. Вся суть заключается в использовании субкласса, который создает объекты \n" +
-                "за вас. Я использую классы, а Абстрактная Фабрика — объекты.");
-    }
 }
 class  NYpizzaStore extends PizzaStore{
     @Override

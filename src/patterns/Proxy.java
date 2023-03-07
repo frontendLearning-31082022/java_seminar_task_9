@@ -2,7 +2,11 @@ package patterns;
 
 import java.io.*;
 
-public interface Proxy { }
+public class Proxy {
+    public static void ReaderTextFile() throws InterruptedException {
+        ProxyReaderTextFile.main( null);
+    }
+}
 class ProxyReaderTextFile extends Thread {
     private StringBuilder readedLines = new StringBuilder();
     File file;
